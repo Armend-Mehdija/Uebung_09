@@ -43,12 +43,14 @@ public class Bus {
 	
 	public ArrayList<Passenger> findPassengersWithoutTickets() {
 		ArrayList<Passenger>gefundeneOhneTicket = new ArrayList<>();
+		ArrayList<Passenger>entfernen = new ArrayList<>();
 		for(Passenger p : passengers) {
-			if(p.getTicket() == false) {
+			if(!p.getTicket()) {
 				gefundeneOhneTicket.add(p);
+				entfernen.add(p);
 			}
-			passengers.removeAll(gefundeneOhneTicket);
-			}
+		}
+		passengers.removeAll(entfernen);
 		return gefundeneOhneTicket;
 	  }
 	
@@ -58,9 +60,10 @@ public class Bus {
 			for(Passenger p : passengers) {
 				if(p.getName().equals(name)) {
 					transfer.add(p);
+					break;
 					}
 			}
 		}
 	}
-	}
+}
 

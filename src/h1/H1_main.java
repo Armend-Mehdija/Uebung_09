@@ -12,5 +12,6 @@ public class H1_main {
 		System.out.println(prioListe.getNextPatient().getName());
 		System.out.println(prioListe.getNextPatient().getName());
 		System.out.println(prioListe.getNextPatient().getName());
+
 	}
 }
